@@ -43,7 +43,7 @@ app.post('/cpp-service-post', async (req, res) => {
   try {
     // Here you can add data to be sent to the C++ service
     const postData = { key: 'value' };
-    const response = await axios.post('http://service:8080/data', postData);
+    const response = await axios.post('http://microservice:8080/data', postData);
     res.send(response.data);
   } catch (error) {
     console.error('Error posting data to C++ service:', error);
